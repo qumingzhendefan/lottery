@@ -14,6 +14,7 @@
     <modules>
         <module>zuul</module>
         <module>demo</module>
+        <module>eureka</module>
     </modules>
 
     <groupId>com.example</groupId>
@@ -27,11 +28,21 @@
     </properties>
 
     <dependencies>
+
+        <!-- 配置管理 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!-- web控制 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -44,7 +55,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>Dalston.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
