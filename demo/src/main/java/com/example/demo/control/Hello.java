@@ -1,15 +1,15 @@
 package com.example.demo.control;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.demo.entity.DemoEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/demo")
 public class Hello {
 
-    @RequestMapping(path = {"/helloSpringBoot"})
-    public String HelloSpring (){
-        System.out.println("hello spring boot");
+    @RequestMapping(path = {"/helloSpringBoot"},method = RequestMethod.POST)
+    public String HelloSpring (@RequestBody DemoEntity demoEntity){
+        System.out.println(demoEntity);
         return "hello spring boot";
     }
 }
