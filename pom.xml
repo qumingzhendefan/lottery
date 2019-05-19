@@ -12,9 +12,13 @@
     </parent>
 
     <modules>
+        <module>eureka</module>
+        <module>client</module>
+        <module>ribbon</module>
+        <module>feign</module>
+        <module>hystrix</module>
         <module>zuul</module>
         <module>demo</module>
-        <module>eureka</module>
     </modules>
 
     <groupId>com.example</groupId>
@@ -30,6 +34,10 @@
     <dependencies>
 
         <!-- 配置管理 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <!-- web控制 -->
         <dependency>
@@ -43,6 +51,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
