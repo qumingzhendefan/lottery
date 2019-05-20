@@ -16,7 +16,6 @@ zuul:
       path: /api-b/**
       serviceId: service-feign
 
-#»€∂œ∆˜≈‰÷√
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
